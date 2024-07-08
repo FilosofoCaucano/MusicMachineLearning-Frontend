@@ -1,2 +1,5 @@
-export const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:8000/api';
-export const APP_NAME = 'Andean Instrument Identifier';
+const config = {
+    apiUrl: 'http://localhost:3000/api'
+};
+
+export default config;

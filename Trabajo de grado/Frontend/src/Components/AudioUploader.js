@@ -1,32 +1,25 @@
+// src/components/AudioUploader.js
 import React, { useState } from 'react';
-import { uploadAudio } from '../services/api';
 
 const AudioUploader = () => {
     const [file, setFile] = useState(null);
 
-    const handleFileChange = (e) => {
-        setFile(e.target.files[0]);
+    const handleFileChange = (event) => {
+        setFile(event.target.files[0]);
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        if (!file) return;
-        try {
-            const response = await uploadAudio(file);
-            console.log('Upload successful:', response);
-            // Handle successful upload (e.g., update state, notify parent component)
-        } catch (error) {
-            console.error('Upload failed:', error);
-            // Handle error (e.g., show error message)
-        }
+    const handleUpload = () => {
+        // Aquí iría la lógica para subir el archivo al backend
+        console.log('Archivo subido:', file);
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input type="file" onChange={handleFileChange} accept="audio/*" />
-            <button type="submit">Upload</button>
-        </form>
+        <div>
+            <input type="file" onChange={handleFileChange} />
+            <button className="button" onClick={handleUpload}>Upload</button>
+        </div>
     );
 };
 
 export default AudioUploader;
+

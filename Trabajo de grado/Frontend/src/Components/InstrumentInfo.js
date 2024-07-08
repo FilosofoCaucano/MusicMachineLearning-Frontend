@@ -1,14 +1,11 @@
 import React from 'react';
 
 const InstrumentInfo = ({ instrument }) => {
-    if (!instrument) return null;
-
+    // Aquí iría la lógica para mostrar información sobre un instrumento específico
     return (
         <div>
-            <h2>{instrument.name}</h2>
-            <p>Type: {instrument.type}</p>
-            <p>Origin: {instrument.origin}</p>
-            <p>Description: {instrument.description}</p>
+            <h3>{instrument.name}</h3>
+            <p>{instrument.description}</p>
         </div>
     );
 };

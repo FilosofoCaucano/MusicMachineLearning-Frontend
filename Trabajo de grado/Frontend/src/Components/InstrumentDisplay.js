@@ -1,15 +1,15 @@
+// src/components/InstrumentDisplay.js
 import React from 'react';
 
-const InstrumentDisplay = ({ instrument }) => {
-    if (!instrument) return null;
-
+const InstrumentDisplay = () => {
+    // Aquí iría la lógica para mostrar los resultados de la identificación
     return (
         <div>
-            <h2>Identified Instrument</h2>
-            <p>{instrument.name}</p>
-            <img src={instrument.imageUrl} alt={instrument.name} />
+            <h2>Identified Instruments</h2>
+            <p>No instruments identified yet.</p>
         </div>
     );
 };
 
 export default InstrumentDisplay;
+
