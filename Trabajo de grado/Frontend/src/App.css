@@ -1,0 +1,117 @@
+/* styles for the app */
+
+
+body {
+    font-family: "Book Antiqua", Georgia, Serif;
+    background-color: #041940;
+    color: #E6CDA5;
+    background: url('ElFondo.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.container {
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
+    border-radius: 10px; /* Bordes redondeados, opcional */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación, opcional */
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.9em;
+    color: #E6CDA5; /* Cambiar el color de las letras si es necesario */
+}
+
+.sidebar {
+    color: #E6CDA5; /* Color de las letras */
+}
+
+.sidebar h2 {
+    color: #E6CDA5 !important; /* Color de los encabezados */
+}
+
+.sidebar button {
+    background-color: #041940;
+    color: #E6CDA5;
+    border: none;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar button:hover {
+    background-color: #0a2a6b; /* Color al pasar el ratón */
+}
+
+.sidebar input[type="text"] {
+    background-color: #E6CDA5;
+    color: #041940;
+    border: 1px solid #E6CDA5;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: calc(100% - 12px); /* Ajuste para el padding */
+}
+
+.sidebar input[type="submit"] {
+    background-color: #041940;
+    color: #E6CDA5;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.sidebar input[type="submit"]:hover {
+    background-color: #0a2a6b; /* Color al pasar el ratón */
+}
+
+
+
+ #left {
+    float: left;
+    width: 30%;
+    margin: 0;
+    padding: 0 10px;
+    background: transparent;
+    color: #000;
+}
+
+#left h2 {
+    font-size: 1.2em;
+    color: #000;
+}
+
+#content {
+    float: right;
+    width: 65%;
+    margin: 0;
+    padding: 10px;
+}
+
+#content .post {
+    line-height: 20px;
+}
+
+#foot {
+    clear: both;
+    height: 30px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #E6CDA5;
+}
+
+a:link, a:visited {
+    color: #041940;
+}
+
+a:hover {
+    color: #796307;
+}

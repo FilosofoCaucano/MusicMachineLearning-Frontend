@@ -1,16 +1,68 @@
-/* src/index.css */
-
+/* En App.css y index.css */
 body {
+    font-family: "Book Antiqua", Georgia, Serif;
+    background-color: #041940;
+    color: #E6CDA5;
+}
+
+.container {
+    width:auto;
+    margin: 40px auto;
+    padding: 10px;
+    background: #041940 url('ElFondo.jpg') no-repeat center center;
+    background-size: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+    /*height: 100vh; /* Ajusta la altura del contenedor al 100% del viewport */
+    
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 1.9em;
+    color: #020201;
+}
+
+
+#left {
+    float: left;
+    width: 30%;
     margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    background-color: #e0e0e0;
+    padding: 0 10px;
+    background: transparent;
+    color: #000;
 }
 
-#root {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+#left h2 {
+    font-size: 1.2em;
+    color: #000;
 }
 
+#content {
+    float: right;
+    width: 65%;
+    margin: 0;
+    padding: 10px;
+}
+
+#content .post {
+    line-height: 20px;
+}
+
+#foot {
+    clear: both;
+    height: 30px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #E6CDA5;
+}
+
+a:link, a:visited {
+    color: #041940;
+}
+
+a:hover {
+    color: #796307;
+}
