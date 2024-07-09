@@ -23,3 +23,4 @@ const DataVisualization = ({ data }) => {
 
 export default DataVisualization;
 
+
