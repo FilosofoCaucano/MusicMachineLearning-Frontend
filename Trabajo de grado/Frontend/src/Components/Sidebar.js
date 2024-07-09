@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Sidebar = () => (
+const Sidebar = ({ onFilterChange }) => (
     <div id="left" className="sidebar">
         <ul>
             <li>
@@ -13,6 +13,15 @@ const Sidebar = () => (
                                 <input type="submit" value="Buscar" />
                             </div>
                         </form>
+                    </li>
+                    <li>
+                        <h3>Filtros:</h3>
+                        <select onChange={(e) => onFilterChange(e.target.value)}>
+                            <option value="all">Todos</option>
+                            <option value="viento">Viento</option>
+                            <option value="cuerda">Cuerda</option>
+                            <option value="percusión">Percusión</option>
+                        </select>
                     </li>
                 </ul>
             </li>
@@ -36,6 +45,7 @@ const Sidebar = () => (
 );
 
 export default Sidebar;
+
 
 
 

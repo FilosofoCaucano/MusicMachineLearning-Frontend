@@ -1,13 +1,14 @@
 import React from 'react';
 
-const InstrumentInfo = ({ instrument }) => {
-    // Aquí iría la lógica para mostrar información sobre un instrumento específico
-    return (
-        <div>
-            <h3>{instrument.name}</h3>
-            <p>{instrument.description}</p>
-        </div>
-    );
-};
+const InstrumentInfo = ({ instrument }) => (
+    <div className="instrument-info">
+        <h2>{instrument.name}</h2>
+        <p>{instrument.description}</p>
+        <audio controls>
+            <source src={instrument.audioSample} type="audio/mpeg" />
+            Tu navegador no soporta la reproducción de audio.
+        </audio>
+    </div>
+);
 
 export default InstrumentInfo;
