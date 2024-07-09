@@ -11,7 +11,7 @@ import './App.css';
 
 const App = () => {
     const [filter, setFilter] = useState('all');
-    const [data, setData] = useState([
+    const [data] = useState([
         { label: 'Viento', value: 10 },
         { label: 'Cuerda', value: 20 },
         { label: 'Percusión', value: 5 }
