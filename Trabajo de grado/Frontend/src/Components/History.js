@@ -1,10 +1,16 @@
 import React from 'react';
+import './History.css';
 
-const History = ({ instrument }) => (
-    <div className="history">
-        <h2>Historia de {instrument.name}</h2>
-        <p>{instrument.history}</p>
-    </div>
-);
+const History = ({ instrument }) => {
+    const { name, history, imageUrl } = instrument;
+
+    return (
+        <div className="history">
+            <h3>Historia de {name}</h3>
+            {imageUrl && <img src={imageUrl} alt={name} className="instrument-image" />}
+            <p>{history}</p>
+        </div>
+    );
+};
 
 export default History;

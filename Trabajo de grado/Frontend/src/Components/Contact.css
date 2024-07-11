@@ -1,0 +1,55 @@
+.contact {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.contact h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #FFD700; /* Color dorado */
+}
+
+.contact p {
+    text-align: justify;
+    color: #DAA520; /* Color dorado oscuro */
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact label {
+    margin: 10px 0 5px;
+    color: #FFD700; /* Color dorado */
+}
+
+.contact input, .contact textarea {
+    padding: 10px;
+    margin: 5px 0 10px;
+    border-radius: 5px;
+    border: 1px solid #8B4513; /* Color marrón oscuro */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    width: 100%;
+    max-width: 400px;
+}
+
+.contact button {
+    background-color: #8B4513; /* Color marrón oscuro */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.contact button:hover {
+    background-color: #A0522D; /* Color marrón rojizo */
+}

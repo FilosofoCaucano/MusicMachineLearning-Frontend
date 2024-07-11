@@ -1,8 +1,9 @@
 import React from 'react';
+import './Footer.css';
 
 const Footer = () => (
-    <div id="foot">
-        Proyecto desarrollado por Willian David Correa V.
+    <div className="footer">
+        <p style={{ textAlign: "center" }}>Proyecto desarrollado por Willian David Correa V.</p>
     </div>
 );
 

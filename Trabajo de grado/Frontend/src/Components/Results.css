@@ -1,0 +1,19 @@
+.results {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.results h3 {
+    margin: 0;
+    padding: 10px 0;
+    color: #FFD700; /* Color dorado */
+}
+
+.results p {
+    text-align: justify;
+    color: #DAA520; /* Color dorado oscuro */
+}

@@ -1,77 +1,120 @@
 /* styles for the app */
-
-
 body {
-    font-family: "Book Antiqua", Georgia, Serif;
-    background-color: #041940;
-    color: #E6CDA5;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: url('ElFondo.jpg') no-repeat center center fixed;
     background-size: cover;
+    color: #fff;
 }
 
-.container {
-    width: 90%;
-    margin: 40px auto;
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
     padding: 20px;
-    background: rgba(0, 0, 0, 0.6); /* Fondo negro con 60% de opacidad */
-    border-radius: 10px; /* Bordes redondeados, opcional */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para darle un efecto de elevación, opcional */
+    border-radius: 10px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
 }
 
-.header {
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.title-container {
     text-align: center;
     margin-bottom: 20px;
-}
-
-.header h1 {
-    font-size: 1.9em;
-    color: #E6CDA5; /* Cambiar el color de las letras si es necesario */
-}
-
-.sidebar {
-    color: #E6CDA5; /* Color de las letras */
-}
-
-.sidebar h2 {
-    color: #E6CDA5 !important; /* Color de los encabezados */
-}
-
-.sidebar button {
-    background-color: #041940;
-    color: #E6CDA5;
-    border: none;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
     padding: 10px;
-    margin: 5px 0;
+    border-radius: 10px;
+}
+
+.main-title, .subtitle {
+    margin: 0;
+    padding: 10px;
+    color: #FFD700; /* Color dorado */
+}
+
+.main-title {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #FF4500; /* Color rojo anaranjado */
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.post {
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro transparente */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 10px 0;
+}
+
+p {
+    text-align: justify;
+    color: #DAA520; /* Color dorado oscuro */
+}
+
+button {
+    background-color: #8B4513; /* Color marrón oscuro */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
     border-radius: 5px;
-    cursor: pointer;
-    width: 100%;
 }
 
-.sidebar button:hover {
-    background-color: #0a2a6b; /* Color al pasar el ratón */
+button:hover {
+    background-color: #A0522D; /* Color marrón rojizo */
 }
 
-.sidebar input[type="text"] {
-    background-color: #E6CDA5;
-    color: #041940;
-    border: 1px solid #E6CDA5;
-    padding: 5px;
-    margin-bottom: 10px;
-    width: calc(100% - 12px); /* Ajuste para el padding */
-}
-
-.sidebar input[type="submit"] {
-    background-color: #041940;
-    color: #E6CDA5;
-    border: none;
+input[type="file"], input[type="text"] {
     padding: 10px;
-    cursor: pointer;
-    width: 100%;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #8B4513; /* Color marrón oscuro */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
 }
 
-.sidebar input[type="submit"]:hover {
-    background-color: #0a2a6b; /* Color al pasar el ratón */
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #8B4513; /* Color marrón oscuro */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
 }
+
 
 
 

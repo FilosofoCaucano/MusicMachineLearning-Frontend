@@ -1,0 +1,34 @@
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.feedback-form label {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #FFD700; /* Color dorado */
+}
+
+.feedback-form textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8B4513; /* Color marrón oscuro */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+}
+
+.feedback-form button {
+    background-color: #8B4513; /* Color marrón oscuro */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.feedback-form button:hover {
+    background-color: #A0522D; /* Color marrón rojizo */
+}

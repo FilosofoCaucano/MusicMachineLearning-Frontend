@@ -1,0 +1,39 @@
+/* Sidebar.css */
+
+.sidebar {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro transparente */
+    color: #f0e6d6; /* Color de texto claro */
+    font-family: 'Georgia', serif; /* Fuente más clásica */
+}
+
+.sidebar h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    text-align: center; /* Centrar el título */
+}
+
+button {
+    background-color: #004d40; /* Color del botón */
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-family: 'Georgia', serif; /* Fuente más clásica */
+}
+
+button:hover {
+    background-color: #00332c; /* Color del botón al pasar el cursor */
+}
+
+input[type="text"], select {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Georgia', serif; /* Fuente más clásica */
+}

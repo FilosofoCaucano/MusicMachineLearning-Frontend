@@ -1,48 +1,40 @@
 import React from 'react';
+import './Sidebar.css';
 
-const Sidebar = ({ onFilterChange }) => (
-    <div id="left" className="sidebar">
-        <ul>
-            <li>
-                <h2>Buscar:</h2>
-                <ul>
-                    <li>
-                        <form id="searchform" method="get" action="#">
-                            <div>
-                                <input type="text" name="s" id="s" size="15" alt="enter search text" />
-                                <input type="submit" value="Buscar" />
-                            </div>
-                        </form>
-                    </li>
-                    <li>
-                        <h3>Filtros:</h3>
-                        <select onChange={(e) => onFilterChange(e.target.value)}>
-                            <option value="all">Todos</option>
-                            <option value="viento">Viento</option>
-                            <option value="cuerda">Cuerda</option>
-                            <option value="percusión">Percusión</option>
-                        </select>
-                    </li>
-                </ul>
-            </li>
-            <li>
+const Sidebar = ({ onFilterChange }) => {
+    return (
+        <div className="sidebar">
+            <div className="search-section">
+                <label htmlFor="search">Buscar:</label>
+                <input type="text" id="search" />
+                <button>Buscar</button>
+            </div>
+
+            <div className="filters-section">
+                <label htmlFor="filters">Filtros:</label>
+                <select id="filters" onChange={(e) => onFilterChange(e.target.value)}>
+                    <option value="all">Todos</option>
+                    <option value="viento">Viento</option>
+                    <option value="cuerda">Cuerda</option>
+                    <option value="percusion">Percusión</option>
+                </select>
+            </div>
+
+            <div className="instrument-section">
                 <h2>Instrumentos Andinos</h2>
-                <ul>
-                    <li><button>Viento</button></li>
-                    <li><button>Cuerda</button></li>
-                    <li><button>Percusión</button></li>
-                </ul>
-            </li>
-            <li>
+                <button onClick={() => onFilterChange('viento')}>Viento</button>
+                <button onClick={() => onFilterChange('cuerda')}>Cuerda</button>
+                <button onClick={() => onFilterChange('percusion')}>Percusión</button>
+            </div>
+
+            <div className="ml-techniques-section">
                 <h2>Técnicas de ML</h2>
-                <ul>
-                    <li><button>Clasificación</button></li>
-                    <li><button>Identificación</button></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-);
+                <button>Clasificación</button>
+                <button>Identificación</button>
+            </div>
+        </div>
+    );
+};
 
 export default Sidebar;
 
