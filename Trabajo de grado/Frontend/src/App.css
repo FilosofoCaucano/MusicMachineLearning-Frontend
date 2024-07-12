@@ -1,10 +1,13 @@
-/* styles for the app */
+/* Andean-inspired styles for the app */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
+
 body {
     margin: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'IM Fell DW Pica', serif;
     background: url('ElFondo.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #fff;
+    background-color: #37474F; /* Blue-grey background */
 }
 
 .app-container {
@@ -12,19 +15,25 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding: 20px;
+    background: rgba(69, 90, 100, 0.8); /* Semi-transparent blue-grey */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px auto;
 }
 
 .main-container {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro transparente */
+    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
     padding: 20px;
     border-radius: 10px;
-    max-width: 1200px;
     width: 100%;
-    margin: 20px;
+    margin: 20px 0;
 }
 
 .content-wrapper {
@@ -37,25 +46,9 @@ body {
 .title-container {
     text-align: center;
     margin-bottom: 20px;
-    background: rgba((0, 0, 0, 0.4)); /* Fondo negro transparente */
+    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
     padding: 10px;
     border-radius: 10px;
-}
-
-.main-title, .subtitle {
-    margin: 0;
-    padding: 10px;
-    color: #FFD700; /* Color dorado */
-}
-
-.main-title {
-    font-size: 2.5em;
-    font-weight: bold;
-}
-
-.subtitle {
-    font-size: 1.2em;
-    color: #FF4500; /* Color rojo anaranjado */
 }
 
 .content {
@@ -66,7 +59,7 @@ body {
 }
 
 .post {
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro transparente */
+    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -76,43 +69,100 @@ body {
 h1, h2, h3 {
     margin: 0;
     padding: 10px 0;
+    font-family: 'IM Fell DW Pica', serif;
+    color: #FFC107; /* Golden sunlight */
 }
 
 p {
     text-align: justify;
-    color: #DAA520; /* Color dorado oscuro */
+    color: #FFEB3B; /* Yellow */
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 18px;
 }
 
-button {
-    background-color: #8B4513; /* Color marrón oscuro */
-    color: #FFF;
-    border: none;
-    padding: 10px 20px;
-    margin: 10px 0;
-    cursor: pointer;
-    border-radius: 5px;
-}
-
-button:hover {
-    background-color: #A0522D; /* Color marrón rojizo */
-}
-
-input[type="file"], input[type="text"] {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #8B4513; /* Color marrón oscuro */
-    background: rgba(255, 255, 255, 0.9);
+/* Styles for the sides */
+#left {
+    float: left;
+    width: 30%;
+    margin: 0;
+    padding: 0 10px;
+    background: transparent;
     color: #000;
 }
 
-select {
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid #8B4513; /* Color marrón oscuro */
-    background: rgba(255, 255, 255, 0.9);
+#left h2 {
+    font-size: 1.2em;
     color: #000;
+}
+
+#content {
+    float: right;
+    width: 65%;
+    margin: 0;
+    padding: 10px;
+}
+
+#content .post {
+    line-height: 20px;
+}
+
+#foot {
+    clear: both;
+    height: 30px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #E6CDA5;
+}
+
+a:link, a:visited {
+    color: #041940;
+}
+
+a:hover {
+    color: #796307;
+}
+
+
+/* styles for the sides */
+#left {
+    float: left;
+    width: 30%;
+    margin: 0;
+    padding: 0 10px;
+    background: transparent;
+    color: #000;
+}
+
+#left h2 {
+    font-size: 1.2em;
+    color: #000;
+}
+
+#content {
+    float: right;
+    width: 65%;
+    margin: 0;
+    padding: 10px;
+}
+
+#content .post {
+    line-height: 20px;
+}
+
+#foot {
+    clear: both;
+    height: 30px;
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #E6CDA5;
+}
+
+a:link, a:visited {
+    color: #041940;
+}
+
+a:hover {
+    color: #796307;
 }
 
 

@@ -1,15 +1,59 @@
 // src/components/InstrumentDisplay.js
-import React from 'react';
 
-const InstrumentDisplay = () => {
-    // Aquí iría la lógica para mostrar los resultados de la identificación
+import React, { useEffect, useRef } from 'react';
+import Chart from 'chart.js/auto';
+import './InstrumentDisplay.css';
+
+const InstrumentDisplay = ({ instrumentData }) => {
+    const chartRef = useRef(null);
+
+    useEffect(() => {
+        if (instrumentData && chartRef.current) {
+            const ctx = chartRef.current.getContext('2d');
+            new Chart(ctx, {
+                type: 'doughnut',
+                data: {
+                    labels: instrumentData.map(item => item.name),
+                    datasets: [{
+                        data: instrumentData.map(item => item.percentage),
+                        backgroundColor: instrumentData.map(item => item.color),
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (tooltipItem) {
+                                    return `${tooltipItem.label}: ${tooltipItem.raw}%`;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        }
+    }, [instrumentData]);
+
     return (
-        <div>
-            <h2>instrumentos identicados</h2>
-            <p>No hay instrumentos idenficados hasta ahora.</p>
+        <div id="instruments" className="instrument-display card">
+            <h2>Instrumentos Identificados</h2>
+            {instrumentData.length ? (
+                <canvas ref={chartRef}></canvas>
+            ) : (
+                <div className="no-instruments">
+                    <p>No hay instrumentos identificados hasta ahora.</p>
+                    <button className="blue-button">Actualizar</button>
+                </div>
+            )}
         </div>
     );
 };
 
 export default InstrumentDisplay;
+
+
 

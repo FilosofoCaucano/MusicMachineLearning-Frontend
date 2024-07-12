@@ -1,13 +1,16 @@
 .footer {
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro transparente */
+    background: rgba(0, 0, 0, 0.4); /* Transparent black background */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     margin-top: 20px;
     width: 100%;
+    font-family: 'Andean', sans-serif; /* Use a legible font */
 }
 
 .footer p {
     margin: 0;
-    color: #FFD700; /* Color dorado */
+    color: #FFD700; /* Golden color */
+    font-size: 1.2em; /* Increase font size for better legibility */
+    line-height: 1.5; /* Add line height for better readability */
 }

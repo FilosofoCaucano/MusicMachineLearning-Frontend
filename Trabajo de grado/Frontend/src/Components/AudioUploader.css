@@ -1,0 +1,39 @@
+/* AudioUploader styles */
+.audio-uploader {
+    background: rgba(139, 69, 19, 0.7); /* Semi-transparent Andean brown */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.audio-uploader h2 {
+    font-size: 24px;
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.audio-uploader input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #8B4513; /* Dark brown */
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+.audio-uploader button {
+    background-color: #8B4513; /* Dark brown */
+    color: #FFF;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 5px;
+    font-family: 'IM Fell DW Pica', serif;
+}
+
+.audio-uploader button:hover {
+    background-color: #A0522D; /* Reddish brown */
+}

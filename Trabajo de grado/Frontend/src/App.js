@@ -11,9 +11,14 @@ import './App.css';
 
 const App = () => {
     const [filter, setFilter] = useState('all');
+    const [instrumentData, setInstrumentData] = useState([]);
 
     const handleFilterChange = (newFilter) => {
         setFilter(newFilter);
+    };
+
+    const handleInstrumentDataChange = (newData) => {
+        setInstrumentData(newData);
     };
 
     return (
@@ -22,21 +27,19 @@ const App = () => {
             <div className="main-container">
                 <div className="content-wrapper">
                     <div className="title-container">
-                        <h1 className="main-title">Identificador de instrumentos de la región andina</h1>
-                        <h2 className="subtitle">Usando técnicas de machine learning</h2>
-                    </div>
-                    <Sidebar onFilterChange={handleFilterChange} />
-                    <div className="content">
-                        <div className="post">
-                            <h3>Sobre el Proyecto</h3>
-                            <p>Este proyecto utiliza técnicas de machine learning para identificar instrumentos musicales de la región andina a partir de archivos de audio.</p>
-                            <AudioUploader filter={filter} />
-                            <InstrumentDisplay filter={filter} />
-                            <Results />
-                            <FeedbackForm />
-                            <History instrument={{ name: 'Quena', history: 'La quena es una flauta andina utilizada tradicionalmente en la música de los Andes.', imageUrl: 'Quena01.jpg' }} />
-                            <History instrument={{ name: 'Bombo', history: 'El bombo es un tambor grande utilizado en la música andina, especialmente en ritmos folclóricos.', imageUrl: 'Bombo01.jpg' }} />
-                            <History instrument={{ name: 'Charango', history: 'El charango es un instrumento de cuerdas utilizado en la música tradicional de los Andes, similar a una guitarra pequeña.', imageUrl: 'Charango01.jpg' }} />
+                        <Sidebar onFilterChange={handleFilterChange} />
+                        <div className="content">
+                            <div className="post">
+                                <h3>Sobre el Proyecto</h3>
+                                <p>Este proyecto utiliza técnicas de machine learning para identificar instrumentos musicales de la región andina a partir de archivos de audio.</p>
+                                <AudioUploader filter={filter} onDataChange={handleInstrumentDataChange} />
+                                <InstrumentDisplay instrumentData={instrumentData} />
+                                <Results />
+                                <FeedbackForm />
+                                <History instrument={{ name: 'Quena', history: 'La quena es una flauta andina utilizada tradicionalmente en la música de los Andes.', imageUrl: 'Quena01.jpg' }} />
+                                <History instrument={{ name: 'Bombo', history: 'El bombo es un tambor grande utilizado en la música andina, especialmente en ritmos folclóricos.', imageUrl: 'Bombo01.jpg' }} />
+                                <History instrument={{ name: 'Charango', history: 'El charango es un instrumento de cuerdas utilizado en la música tradicional de los Andes, similar a una guitarra pequeña.', imageUrl: 'Charango01.jpg' }} />
+                            </div>
                         </div>
                     </div>
                 </div>

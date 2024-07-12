@@ -1,19 +1,56 @@
+/* Results section */
 .results {
-    background: rgba(0, 0, 0, 0.4); /* Fondo negro transparente */
+    background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     border-radius: 10px;
-    margin-bottom: 20px;
-    width: 100%;
     text-align: center;
+    margin-bottom: 20px;
+    animation: fadeIn 1s ease-in-out;
 }
 
 .results h3 {
-    margin: 0;
-    padding: 10px 0;
-    color: #FFD700; /* Color dorado */
+    font-size: 24px;
+    color: #8C4A00; /* Marrón oscuro */
+    margin-bottom: 10px;
 }
 
 .results p {
-    text-align: justify;
-    color: #DAA520; /* Color dorado oscuro */
+    font-size: 18px;
+    color: #6A3400; /* Marrón */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.results ul {
+    list-style: none;
+    padding: 0;
+}
+
+.results ul li {
+    font-size: 18px;
+    color: #6A3400; /* Marrón */
+    margin-bottom: 5px;
+}
+
+.blue-button {
+    background-color: #007BFF; /* Azul */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.blue-button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import './InstrumentInfo.css';
 
 const InstrumentInfo = ({ instrument }) => (
     <div className="instrument-info">
