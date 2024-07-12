@@ -1,4 +1,4 @@
-/* Results section */
+/* src/components/Results.css */
 .results {
     background: rgba(255, 255, 255, 0.7);
     padding: 20px;
@@ -14,36 +14,11 @@
     margin-bottom: 10px;
 }
 
-.results p {
-    font-size: 18px;
-    color: #6A3400; /* Marrón */
-    text-align: center;
-    margin-bottom: 10px;
-}
-
-.results ul {
-    list-style: none;
-    padding: 0;
-}
-
+.results p,
 .results ul li {
     font-size: 18px;
     color: #6A3400; /* Marrón */
-    margin-bottom: 5px;
-}
-
-.blue-button {
-    background-color: #007BFF; /* Azul */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.blue-button:hover {
-    background-color: #0056b3;
+    text-align: center;
 }
 
 @keyframes fadeIn {

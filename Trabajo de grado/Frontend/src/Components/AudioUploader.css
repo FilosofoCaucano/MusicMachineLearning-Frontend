@@ -1,6 +1,6 @@
-/* AudioUploader styles */
+/* src/components/AudioUploader.css */
 .audio-uploader {
-    background: rgba(139, 69, 19, 0.7); /* Semi-transparent Andean brown */
+    background: rgba(255, 255, 255, 0.7); /* Marrón Andino semi-transparente */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -9,22 +9,23 @@
 
 .audio-uploader h2 {
     font-size: 24px;
-    color: #FFD700;
+    color: #8C4A00; /* Marrón oscuro */
     margin-bottom: 10px;
 }
 
-.audio-uploader input {
+.audio-uploader input.custom-file-input {
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
-    border: 1px solid #8B4513; /* Dark brown */
+    border: 1px solid #8B4513; /* Marrón oscuro */
     background: rgba(255, 255, 255, 0.9);
     color: #000;
     font-family: 'IM Fell DW Pica', serif;
+    font-size: 18px;
 }
 
 .audio-uploader button {
-    background-color: #8B4513; /* Dark brown */
+    background-color: #8B4513; /* Marrón oscuro */
     color: #FFF;
     border: none;
     padding: 10px 20px;
@@ -35,5 +36,6 @@
 }
 
 .audio-uploader button:hover {
-    background-color: #A0522D; /* Reddish brown */
+    background-color: #A0522D; /* Marrón rojizo */
 }
+

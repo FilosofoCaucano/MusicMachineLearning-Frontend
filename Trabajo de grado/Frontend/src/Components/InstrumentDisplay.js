@@ -1,5 +1,4 @@
 // src/components/InstrumentDisplay.js
-
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import './InstrumentDisplay.css';
@@ -39,7 +38,7 @@ const InstrumentDisplay = ({ instrumentData }) => {
     }, [instrumentData]);
 
     return (
-        <div id="instruments" className="instrument-display card">
+        <div className="instrument-display card">
             <h2>Instrumentos Identificados</h2>
             {instrumentData.length ? (
                 <canvas ref={chartRef}></canvas>
@@ -54,6 +53,7 @@ const InstrumentDisplay = ({ instrumentData }) => {
 };
 
 export default InstrumentDisplay;
+
 
 
 
