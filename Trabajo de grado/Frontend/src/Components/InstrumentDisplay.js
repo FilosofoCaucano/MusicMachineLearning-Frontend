@@ -1,4 +1,4 @@
-// src/components/InstrumentDisplay.js
+// InstrumentDisplay.js
 import React, { useEffect, useRef } from 'react';
 import Chart from 'chart.js/auto';
 import './InstrumentDisplay.css';
@@ -23,6 +23,9 @@ const InstrumentDisplay = ({ instrumentData }) => {
                     plugins: {
                         legend: {
                             position: 'top',
+                            labels: {
+                                color: '#FFD700'
+                            }
                         },
                         tooltip: {
                             callbacks: {
@@ -38,14 +41,14 @@ const InstrumentDisplay = ({ instrumentData }) => {
     }, [instrumentData]);
 
     return (
-        <div className="instrument-display card">
+        <div className="instrument-display">
             <h2>Instrumentos Identificados</h2>
             {instrumentData.length ? (
                 <canvas ref={chartRef}></canvas>
             ) : (
                 <div className="no-instruments">
                     <p>No hay instrumentos identificados hasta ahora.</p>
-                    <button className="blue-button">Actualizar</button>
+                    <button className="andean-button">Actualizar</button>
                 </div>
             )}
         </div>
@@ -53,7 +56,6 @@ const InstrumentDisplay = ({ instrumentData }) => {
 };
 
 export default InstrumentDisplay;
-
 
 
 

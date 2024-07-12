@@ -1,4 +1,5 @@
 /* Andean-inspired styles for the app */
+/* App.css */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
 body {
@@ -6,78 +7,45 @@ body {
     font-family: 'IM Fell DW Pica', serif;
     background: url('ElFondo.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #fff;
-    background-color: #37474F; /* Blue-grey background */
+    color: #FFD700;
 }
 
 .app-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background: rgba(69, 90, 100, 0.8); /* Semi-transparent blue-grey */
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     max-width: 1200px;
-    width: 100%;
-    margin: 20px auto;
-}
-
-.main-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
+    margin: 0 auto;
     padding: 20px;
-    border-radius: 10px;
-    width: 100%;
-    margin: 20px 0;
 }
 
-.content-wrapper {
+.main-content {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-}
-
-.title-container {
-    text-align: center;
-    margin-bottom: 20px;
-    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
-    padding: 10px;
-    border-radius: 10px;
+    gap: 20px;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    flex: 1;
 }
 
 .post {
-    background: rgba(69, 90, 100, 0.7); /* Semi-transparent blue-grey */
+    background: rgba(139, 69, 19, 0.7);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    width: 100%;
 }
 
 h1, h2, h3 {
-    margin: 0;
-    padding: 10px 0;
-    font-family: 'IM Fell DW Pica', serif;
-    color: #FFC107; /* Golden sunlight */
+    color: #FFD700;
+    margin-top: 0;
 }
 
 p {
-    text-align: justify;
-    color: #FFEB3B; /* Yellow */
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 18px;
+    color: #FFF;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
 }
 
 /* Styles for the sides */

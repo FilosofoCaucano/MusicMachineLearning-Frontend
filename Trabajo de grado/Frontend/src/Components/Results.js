@@ -1,24 +1,18 @@
+// Results.js
 import React from 'react';
 import './Results.css';
 
-
 const Results = () => {
     return (
-        <div className="results" style={{ textAlign: "center" }}>
-            <h3>Resultados</h3>
-            <p>Estos son los resultados de los últimos análisis realizados:</p>
+        <div className="results">
+            <h3>Resultados del Análisis</h3>
+            <p>Precisión en la identificación de instrumentos:</p>
             <ul>
-                <li>
-                    <strong>Quena:</strong> 85% precisión.
-                </li>
-                <li>
-                    <strong>Bombo:</strong> 78% precisión.
-                </li>
-                <li>
-                    <strong>Charango:</strong> 92% precisión.
-                </li>
+                <li><span className="instrument">Quena:</span> <span className="accuracy">85%</span></li>
+                <li><span className="instrument">Bombo:</span> <span className="accuracy">78%</span></li>
+                <li><span className="instrument">Charango:</span> <span className="accuracy">92%</span></li>
             </ul>
-            <button className="blue-button">Ver más detalles</button>
+            <button className="andean-button">Ver más detalles</button>
         </div>
     );
 };

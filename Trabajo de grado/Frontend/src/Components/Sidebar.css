@@ -1,40 +1,47 @@
 /* Sidebar.css */
-
 .sidebar {
+    background-color: rgba(139, 69, 19, 0.7);
+    color: #FFD700;
     padding: 20px;
-    background-color: rgba(245, 245, 220, 0.5); /* Fondo oscuro transparente */
-    color: #f0e6d6; /* Color de texto claro */
-    font-family: 'Georgia', serif; /* Fuente más clásica */
+    border-radius: 10px;
+    font-family: 'IM Fell DW Pica', serif;
+    margin-bottom: 20px;
 }
 
-.sidebar h2 {
+.sidebar h3 {
     margin-top: 20px;
     margin-bottom: 10px;
-    font-size: 1.5em;
-    text-align: center; /* Centrar el título */
-    font-family: 'Andean', cursive; /* Fuente estilo Andino */
+    font-size: 1.3em;
+    text-align: center;
+    color: #FFD700;
 }
 
-button {
-    background-color: #004d40; /* Color del botón */
-    color: #fff;
+.andean-button {
+    background-color: #8B4513;
+    color: #FFD700;
     padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-    font-family: 'Andean', cursive; /* Fuente estilo Andino */
+    font-family: 'IM Fell DW Pica', serif;
+    transition: background-color 0.3s;
 }
 
-button:hover {
-    background-color: #00332c; /* Color del botón al pasar el cursor */
+.andean-button:hover {
+    background-color: #A0522D;
 }
 
 input[type="text"], select {
     padding: 10px;
     margin-top: 10px;
-    width: auto;
-    border: 1px solid #ccc;
+    width: 100%;
+    border: 1px solid #8B4513;
     border-radius: 5px;
-    font-family: 'Andean', cursive; /* Fuente estilo Andino */
+    font-family: 'IM Fell DW Pica', serif;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.search-section, .filters-section, .instrument-section, .ml-techniques-section {
+    margin-bottom: 20px;
 }

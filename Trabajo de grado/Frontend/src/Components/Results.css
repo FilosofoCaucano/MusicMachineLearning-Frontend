@@ -1,6 +1,6 @@
-/* src/components/Results.css */
+/* Results.css */
 .results {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(139, 69, 19, 0.7);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -9,23 +9,55 @@
 }
 
 .results h3 {
-    font-size: 24px;
-    color: #8C4A00; /* Marrón oscuro */
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-bottom: 15px;
+}
+
+.results p {
+    font-size: 1.2rem;
+    color: #FFF;
     margin-bottom: 10px;
 }
 
-.results p,
-.results ul li {
-    font-size: 18px;
-    color: #6A3400; /* Marrón */
-    text-align: center;
+.results ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.results li {
+    font-size: 1.1rem;
+    color: #FFF;
+    margin-bottom: 5px;
+}
+
+.instrument {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+.accuracy {
+    color: #90EE90;
+}
+
+.andean-button {
+    background-color: #8B4513;
+    color: #FFD700;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1rem;
+    margin-top: 15px;
+    transition: background-color 0.3s;
+}
+
+.andean-button:hover {
+    background-color: #A0522D;
 }
 
 @keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

@@ -1,16 +1,19 @@
+// Header.js
 import React from 'react';
 import './Header.css';
 
 const Header = () => {
     return (
-        <div id="head" className="header-container">
-            <h1 className="header-title">Bienvenido</h1>
+        <div className="header-container">
             <img
                 src="Bienvenido02.jpg"
-                alt="Imagen andina"
+                alt="Paisaje andino"
                 className="header-image"
             />
-            <h2 className="header-subtitle">¡Explora los sonidos de los Andes!</h2>
+            <div className="header-text">
+                <h1 className="header-title">Instrumentos Andinos</h1>
+                <h2 className="header-subtitle">Explora los Sonidos Ancestrales</h2>
+            </div>
         </div>
     );
 };

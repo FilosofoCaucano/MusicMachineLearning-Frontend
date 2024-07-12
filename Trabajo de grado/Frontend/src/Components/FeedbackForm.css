@@ -1,40 +1,45 @@
+/* FeedbackForm.css */
 .feedback-form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(139, 69, 19, 0.7);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
 }
 
 .feedback-form h3 {
-    font-size: 24px;
-    color: #8C4A00; /* Marrón oscuro */
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-bottom: 15px;
 }
 
 .feedback-form textarea {
-    width: 80%;
-    height: 100px; /* Adjust the height as needed */
-    margin-bottom: 10px;
+    width: 90%;
+    height: 100px;
+    margin-bottom: 15px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #8B4513;
     padding: 10px;
-    resize: none; /* Prevent resizing */
-    font-size: 16px; /* Adjust the font size as needed */
+    resize: vertical;
+    font-size: 1rem;
+    font-family: 'IM Fell DW Pica', serif;
+    background-color: rgba(255, 255, 255, 0.9);
 }
 
-.blue-button {
-    background-color: #007BFF; /* Azul */
-    color: white;
+.andean-button {
+    background-color: #8B4513;
+    color: #FFD700;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
 }
 
-.blue-button:hover {
-    background-color: #0056b3;
+.andean-button:hover {
+    background-color: #A0522D;
 }

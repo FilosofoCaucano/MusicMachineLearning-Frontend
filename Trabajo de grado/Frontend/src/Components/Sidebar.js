@@ -1,3 +1,4 @@
+// Sidebar.js
 import React from 'react';
 import './Sidebar.css';
 
@@ -5,14 +6,13 @@ const Sidebar = ({ onFilterChange }) => {
     return (
         <div className="sidebar">
             <div className="search-section">
-                <label htmlFor="search">Buscar:</label>
-                <input type="text" id="search" />
-                <button>Buscar</button>
+                <input type="text" placeholder="Buscar instrumento..." />
+                <button className="andean-button">Buscar</button>
             </div>
 
             <div className="filters-section">
-                <label htmlFor="filters">Filtros:</label>
-                <select id="filters" onChange={(e) => onFilterChange(e.target.value)}>
+                <h3>Filtrar por tipo:</h3>
+                <select onChange={(e) => onFilterChange(e.target.value)}>
                     <option value="all">Todos</option>
                     <option value="viento">Viento</option>
                     <option value="cuerda">Cuerda</option>
@@ -21,23 +21,19 @@ const Sidebar = ({ onFilterChange }) => {
             </div>
 
             <div className="instrument-section">
-                <h2>Instrumentos Andinos</h2>
-                <button onClick={() => onFilterChange('viento')}>Viento</button>
-                <button onClick={() => onFilterChange('cuerda')}>Cuerda</button>
-                <button onClick={() => onFilterChange('percusion')}>Percusión</button>
+                <h3>Instrumentos Andinos</h3>
+                <button className="andean-button" onClick={() => onFilterChange('viento')}>Viento</button>
+                <button className="andean-button" onClick={() => onFilterChange('cuerda')}>Cuerda</button>
+                <button className="andean-button" onClick={() => onFilterChange('percusion')}>Percusión</button>
             </div>
 
             <div className="ml-techniques-section">
-                <h2>Técnicas de ML</h2>
-                <button>Clasificación</button>
-                <button>Identificación</button>
+                <h3>Técnicas de ML</h3>
+                <button className="andean-button">Clasificación</button>
+                <button className="andean-button">Identificación</button>
             </div>
         </div>
     );
 };
 
 export default Sidebar;
-
-
-
-

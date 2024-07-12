@@ -1,17 +1,18 @@
-/* src/components/InstrumentDisplay.css */
+/* InstrumentDisplay.css */
 .instrument-display {
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(139, 69, 19, 0.7);
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     margin-bottom: 20px;
+    font-family: 'IM Fell DW Pica', serif;
     animation: fadeIn 1s ease-in-out;
 }
 
 .instrument-display h2 {
-    font-size: 24px;
-    color: #8C4A00; /* Marrón oscuro */
-    margin-bottom: 10px;
+    font-size: 1.8rem;
+    color: #FFD700;
+    margin-bottom: 15px;
 }
 
 .no-instruments {
@@ -21,23 +22,25 @@
 }
 
 .no-instruments p {
-    font-size: 18px;
-    color: #6A3400; /* Marrón */
-    text-align: justify;
+    font-size: 1.2rem;
+    color: #FFD700;
+    margin-bottom: 15px;
 }
 
-.blue-button {
-    background-color: #007BFF; /* Azul */
-    color: white;
+.andean-button {
+    background-color: #8B4513;
+    color: #FFD700;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1rem;
 }
 
-.blue-button:hover {
-    background-color: #0056b3;
+.andean-button:hover {
+    background-color: #A0522D;
 }
 
 @keyframes fadeIn {
