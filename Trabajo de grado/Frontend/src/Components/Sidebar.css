@@ -5,7 +5,6 @@
     background-color: rgba(245, 245, 220, 0.5); /* Fondo oscuro transparente */
     color: #f0e6d6; /* Color de texto claro */
     font-family: 'Georgia', serif; /* Fuente más clásica */
-    border-radius: 10px; /* Agregar bordes redondeados */
 }
 
 .sidebar h2 {

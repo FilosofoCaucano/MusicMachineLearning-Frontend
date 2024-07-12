@@ -1,6 +1,5 @@
-/* src/components/AudioUploader.css */
 .audio-uploader {
-    background: rgba(255, 255, 255, 0.7); /* Marrón Andino semi-transparente */
+    background: rgba(139, 69, 19, 0.7); /* Marrón Andino semi-transparente */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
@@ -38,4 +37,3 @@
 .audio-uploader button:hover {
     background-color: #A0522D; /* Marrón rojizo */
 }
-

@@ -13,3 +13,4 @@ const InstrumentInfo = ({ instrument }) => (
 );
 
 export default InstrumentInfo;
+
