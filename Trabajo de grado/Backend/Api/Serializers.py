@@ -1,3 +1,4 @@
+# backend/api/serializers.py
 from rest_framework import serializers
 from .models import AudioFile, Instrument
 
@@ -6,7 +7,8 @@ class AudioFileSerializer(serializers.ModelSerializer):
         model = AudioFile
         fields = ['id', 'file', 'uploaded_at']
 
+
 class InstrumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Instrument
-        fields = ['id', 'name', 'type', 'description', 'origin', 'image']
+        fields = ['id', 'name', 'type', 'description', 'origin', 'image_url']
