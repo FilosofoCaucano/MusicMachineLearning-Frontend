@@ -1,8 +1,9 @@
+// frontend/src/components/History.js
 import React from 'react';
 import './History.css';
 
-const History = ({ instrument }) => {
-    const { name, history, imageUrl } = instrument;
+const History = ({ instrument = {} }) => {
+    const { name = 'Instrumento desconocido', history = 'No hay información disponible.', imageUrl = '' } = instrument;
 
     return (
         <div className="history">

@@ -1,6 +1,6 @@
 // frontend/src/components/AudioUploader.js
 import React, { useState } from 'react';
-import { uploadAudio, identifyInstrument } from '../services/api';
+import { uploadAudio, identifyInstrument } from '../Services/Api';
 
 const AudioUploader = ({ onInstrumentIdentified }) => {
     const [audioFile, setAudioFile] = useState(null);
