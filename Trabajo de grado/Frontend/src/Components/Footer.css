@@ -9,7 +9,7 @@
     border: 10px solid transparent;
     border-image-source: linear-gradient(to right, #8B4513, #FFD700, #8B4513);
     border-image-slice: 1;
-    border-radius: 15px;
+    border-radius: 25px; /* Increase the value to make the borders more round */
 }
 
 .footer p {
