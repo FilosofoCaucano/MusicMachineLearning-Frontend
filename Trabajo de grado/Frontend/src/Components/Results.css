@@ -40,6 +40,17 @@
     color: #90EE90;
 }
 
+.graph-container {
+    margin-bottom: 20px;
+}
+
+.graph-placeholder {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px dashed #FFD700;
+    padding: 20px;
+    border-radius: 10px;
+}
+
 .andean-button {
     background-color: #8B4513;
     color: #FFD700;

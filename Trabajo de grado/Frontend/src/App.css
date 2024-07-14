@@ -10,6 +10,18 @@ body {
     color: #FFD700;
 }
 
+.search-button {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #8B4513;
+    background: rgba(255, 255, 255, 0.9);
+    color: #000;
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1rem;
+}
+
+
 .app-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -32,9 +44,21 @@ body {
     margin-bottom: 20px;
 }
 
-h1, h2, h3 {
+.container {
+    width: 100%;
+    background-color: rgba(139, 69, 19, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.container h1, .container h2, .container h3 {
     color: #FFD700;
     margin-top: 0;
+    font-family: 'IM Fell DW Pica', serif;
+    text-shadow: 2px 2px 4px rgba(69, 90, 100, 0.7);
+    font-size: 1.8rem;
+
 }
 
 p {
@@ -48,47 +72,6 @@ p {
     }
 }
 
-/* Styles for the sides */
-#left {
-    float: left;
-    width: 30%;
-    margin: 0;
-    padding: 0 10px;
-    background: transparent;
-    color: #000;
-}
-
-#left h2 {
-    font-size: 1.2em;
-    color: #000;
-}
-
-#content {
-    float: right;
-    width: 65%;
-    margin: 0;
-    padding: 10px;
-}
-
-#content .post {
-    line-height: 20px;
-}
-
-#foot {
-    clear: both;
-    height: 30px;
-    text-align: center;
-    padding: 20px 0 0 0;
-    color: #E6CDA5;
-}
-
-a:link, a:visited {
-    color: #041940;
-}
-
-a:hover {
-    color: #796307;
-}
 
 
 /* styles for the sides */

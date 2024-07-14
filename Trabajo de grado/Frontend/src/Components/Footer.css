@@ -1,16 +1,26 @@
 .footer {
-    background: rgba(0, 0, 0, 0.4); /* Transparent black background */
-    padding: 20px;
-    border-radius: 10px;
+    background-color: #8B4513;
+    color: #FFD700;
     text-align: center;
-    margin-top: 20px;
-    width: 100%;
-    font-family: 'Andean', sans-serif; /* Use a legible font */
+    padding: 20px;
+    font-family: 'IM Fell DW Pica', serif;
+    position: relative;
+    margin: 20px;
+    border: 10px solid transparent;
+    border-image-source: linear-gradient(to right, #8B4513, #FFD700, #8B4513);
+    border-image-slice: 1;
+    border-radius: 15px;
 }
 
 .footer p {
-    margin: 0;
-    color: #FFD700; /* Golden color */
-    font-size: 1.2em; /* Increase font size for better legibility */
-    line-height: 1.5; /* Add line height for better readability */
+    margin: 10px 0;
+}
+
+.footer a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }

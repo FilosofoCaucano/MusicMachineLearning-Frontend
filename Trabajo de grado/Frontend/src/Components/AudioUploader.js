@@ -1,6 +1,7 @@
 // frontend/src/components/AudioUploader.js
 import React, { useState } from 'react';
 import { uploadAudio, identifyInstrument } from '../Services/Api';
+import './AudioUploader.css';
 
 const AudioUploader = ({ onInstrumentIdentified }) => {
     const [audioFile, setAudioFile] = useState(null);
@@ -21,13 +22,11 @@ const AudioUploader = ({ onInstrumentIdentified }) => {
     };
 
     return (
-        <div>
-            <input type="file" onChange={handleFileChange} />
-            <button onClick={handleUpload}>Upload and Classify</button>
+        <div className="audio-uploader">
+            <input type="file" className="custom-file-input" onChange={handleFileChange} />
+            <button className="andean-button" onClick={handleUpload}>Clasificar</button>
         </div>
     );
 };
 
 export default AudioUploader;
-
-

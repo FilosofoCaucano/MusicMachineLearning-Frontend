@@ -4,9 +4,9 @@ import './Sidebar.css';
 
 const Sidebar = ({ onFilterChange }) => {
     return (
-        <div className="sidebar">
+        <div className="sidebar" style={{ width: '25%' }}>
             <div className="search-section">
-                <input type="text" placeholder="Buscar instrumento..." />
+                <input type="text" placeholder="Buscar instrumento..." className="search-input" />
                 <button className="andean-button">Buscar</button>
             </div>
 
