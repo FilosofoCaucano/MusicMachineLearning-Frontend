@@ -2,25 +2,21 @@
 /* App.css */
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica&display=swap');
 
+:root {
+    --primary-color: #8B4513;
+    --secondary-color: #FFD700;
+    --background-color: rgba(139, 69, 19, 0.7);
+    --text-color: #FFD700;
+}
+
 body {
     margin: 0;
     font-family: 'IM Fell DW Pica', serif;
     background: url('ElFondo.jpg') no-repeat center center fixed;
     background-size: cover;
-    color: #FFD700;
+    color: var(--text-color);
+    line-height: 1.6;
 }
-
-.search-button {
-    width: 100%;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #8B4513;
-    background: rgba(255, 255, 255, 0.9);
-    color: #000;
-    font-family: 'IM Fell DW Pica', serif;
-    font-size: 1rem;
-}
-
 
 .app-container {
     max-width: 1200px;
@@ -30,7 +26,7 @@ body {
 
 .main-content {
     display: flex;
-    gap: 20px;
+    gap: 30px;
 }
 
 .content {
@@ -38,124 +34,140 @@ body {
 }
 
 .post {
-    background: rgba(139, 69, 19, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    background: var(--background-color);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
 }
 
-.container {
-    width: 100%;
-    background-color: rgba(139, 69, 19, 0.7);
-    padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 20px;
+.post:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
 
-.container h1, .container h2, .container h3 {
-    color: #FFD700;
+h1, h2, h3 {
+    color: var(--secondary-color);
     margin-top: 0;
-    font-family: 'IM Fell DW Pica', serif;
-    text-shadow: 2px 2px 4px rgba(69, 90, 100, 0.7);
-    font-size: 1.8rem;
-
+    font-weight: 600;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 p {
     color: #FFF;
-    line-height: 1.6;
+    line-height: 1.8;
 }
 
+.history-section {
+    background: var(--background-color);
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.history-section h3 {
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.search-button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    font-family: 'IM Fell DW Pica', serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #E6C200;
+}
+
+a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #E6C200;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Responsive styles */
 @media (max-width: 768px) {
     .main-content {
         flex-direction: column;
     }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -280px;
+        width: 280px;
+        height: 100%;
+        background: var(--background-color);
+        transition: left 0.3s ease-in-out;
+        z-index: 1000;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .sidebar.open {
+        left: 0;
+    }
+
+    .sidebar-toggle {
+        display: block;
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        z-index: 1001;
+        background: var(--secondary-color);
+        color: var(--primary-color);
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .content {
+        margin-left: 0;
+        padding-top: 60px;
+    }
 }
 
-
-
-/* styles for the sides */
-#left {
-    float: left;
-    width: 30%;
-    margin: 0;
-    padding: 0 10px;
-    background: transparent;
-    color: #000;
+@media (min-width: 769px) {
+    .sidebar-toggle {
+        display: none;
+    }
 }
 
-#left h2 {
-    font-size: 1.2em;
-    color: #000;
+/* New components styles */
+.spectrogram, .comparative-analysis, .multimedia-experience {
+    background: var(--background-color);
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#content {
-    float: right;
-    width: 65%;
-    margin: 0;
-    padding: 10px;
-}
-
-#content .post {
-    line-height: 20px;
-}
-
-#foot {
-    clear: both;
-    height: 30px;
-    text-align: center;
-    padding: 20px 0 0 0;
-    color: #E6CDA5;
-}
-
-a:link, a:visited {
-    color: #041940;
-}
-
-a:hover {
-    color: #796307;
-}
-
-
-
-
- #left {
-    float: left;
-    width: 30%;
-    margin: 0;
-    padding: 0 10px;
-    background: transparent;
-    color: #000;
-}
-
-#left h2 {
-    font-size: 1.2em;
-    color: #000;
-}
-
-#content {
-    float: right;
-    width: 65%;
-    margin: 0;
-    padding: 10px;
-}
-
-#content .post {
-    line-height: 20px;
-}
-
-#foot {
-    clear: both;
-    height: 30px;
-    text-align: center;
-    padding: 20px 0 0 0;
-    color: #E6CDA5;
-}
-
-a:link, a:visited {
-    color: #041940;
-}
-
-a:hover {
-    color: #796307;
+.multimedia-experience audio, .multimedia-experience video {
+    width: 100%;
+    margin-top: 15px;
 }

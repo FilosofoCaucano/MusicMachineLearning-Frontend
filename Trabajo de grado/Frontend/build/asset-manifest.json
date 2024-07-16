@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e15ac86f.css",
+    "main.js": "/static/js/main.07ed2c5e.js",
+    "static/media/ElFondo.jpg": "/static/media/ElFondo.b51675154c667f77d167.jpg",
+    "index.html": "/index.html",
+    "main.e15ac86f.css.map": "/static/css/main.e15ac86f.css.map",
+    "main.07ed2c5e.js.map": "/static/js/main.07ed2c5e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e15ac86f.css",
+    "static/js/main.07ed2c5e.js"
+  ]
+}
