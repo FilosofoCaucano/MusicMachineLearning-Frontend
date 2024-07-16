@@ -1,4 +1,4 @@
-from .base import *
+from .Base import *
 
 DEBUG = False
 
@@ -18,5 +18,3 @@ DATABASES = {
 CORS_ALLOWED_ORIGINS = [
     "https://your-frontend-domain.com",
 ]
-
-# Add more production-specific settings here

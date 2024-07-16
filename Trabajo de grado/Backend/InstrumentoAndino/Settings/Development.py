@@ -1,4 +1,4 @@
-from .base import *
+from .Base import *
 
 DEBUG = True
 

@@ -41,7 +41,38 @@ const App = () => {
                 <div className="content">
                     <div className="post">
                         <h3>Sobre el Proyecto</h3>
-                        <p>Este proyecto utiliza técnicas de machine learning para identificar instrumentos musicales de la región andina a partir de archivos de audio.</p>
+                        <p>Este proyecto utiliza técnicas de machine learning para identificar instrumentos musicales de la región andina a partir de archivos de audio.
+                            La identificacion de instrumentos musicales a partir de grabaciones de audio es una tarea
+                            compleja que ha cobrado gran relevancia en el campo de la musicologia y las aplicaciones
+                            tecnologicas. La creciente disponibilidad de grandes bases de datos de musica accesibles
+                            al publico ha creado la necesidad de desarrollar sistemas que permitan la clasificacion
+                            y el reconocimiento automatico de los contenidos de estos archivos. La identificacion
+                            de instrumentos musicales en grabaciones de audio es crucial para diversas aplicaciones,
+                            tales como la indexacion automatica de datos, la recuperacion de informacion en bases de
+                            datos, el reconocimiento de estilos musicales, la edicion de audio, la generacion de listas
+                            de reproduccion, la recuperacion de audio y la transcripcion musical. A pesar de los
+                            numerosos estudios propuestos sobre la identificacion de instrumentos musicales, no se ha
+                            encontrado investigacion especifica sobre la identificacion de los instrumentos tipicos de la
+                            region andina
+
+                            <p>La identificacion de instrumentos musicales de la region andina mediante tecnicas
+                                de Machine Learning representa una interseccion innovadora entre la musica tradicional
+                                y la tecnologia moderna. Este enfoque aprovecha la capacidad de los algoritmos de
+                                aprendizaje automatico para procesar y analizar digitalmente las caracteristicas acusticas
+                                de los sonidos, mejorando asi la precision y eficiencia en la identificacion de instrumentos
+                                musicales especificos. Machine Learning (ML) ha evolucionado drasticamente en los
+                                ultimos años y ahora se esta utilizando a escala global por los ingenierios de sistemas para
+                                resolver diferentes problemas.</p>
+                            <p>Como un subconjunto de la inteligencia artificial, ML se ha considerado vital al desarrollar
+                                sistemas de software para dominios como el reconocimiento de voz/imagen o automotriz.
+                                Las tecnicas de ML tambien se han utilizado para abordar varios problemas y actividades
+                                de ingenieria de software. Comunmente, ML se ha empleado en la prediccion de defectos,
+                                la estimacion de esfuerzo y la identificacion de patrones y similitudes en el codigo fuente.
+                                Estas tecnicas estan dirigidas esencialmente a resolver problemas, los cuales a menudo
+                                pueden ser dificiles de analizar para las personas como la identificacion y reconocimiento
+                                de instrumentos.</p>
+
+                        </p>
                     </div>
                     <AudioUploader onInstrumentIdentified={handleInstrumentIdentified} />
                     {identifiedInstrument && (

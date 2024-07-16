@@ -5,10 +5,9 @@ from .models import AudioFile, Instrument
 class AudioFileSerializer(serializers.ModelSerializer):
     class Meta:
         model = AudioFile
-        fields = ['id', 'file', 'uploaded_at']
-
+        fields = '__all__'
 
 class InstrumentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Instrument
-        fields = ['id', 'name', 'type', 'description', 'origin', 'image_url']
+        fields = '__all__'
