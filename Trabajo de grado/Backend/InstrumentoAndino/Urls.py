@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import AudioFileUploadView, InstrumentListView
+from .Views import AudioFileUploadView, InstrumentListView
 
 urlpatterns = [
     path('upload/', AudioFileUploadView.as_view(), name='upload'),

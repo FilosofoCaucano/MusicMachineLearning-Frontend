@@ -1,6 +1,6 @@
 # backend/api/serializers.py
 from rest_framework import serializers
-from .models import AudioFile, Instrument
+from Models.py import AudioFile, Instrument
 
 class AudioFileSerializer(serializers.ModelSerializer):
     class Meta:

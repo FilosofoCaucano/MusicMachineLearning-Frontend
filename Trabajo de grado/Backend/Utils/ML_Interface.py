@@ -1,5 +1,5 @@
 import joblib
-from .audio_processor import extract_features
+from .Audio_procressor import extract_features
 
 # Load the trained model
 model = joblib.load('path/to/your/trained_model.pkl')
