@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import './Results.css';
+//import spectrogramImage from '/Trabajo de grado/ML/Notebooks/spectrogram.png';
+
 
 const Results = ({ identifiedInstrument }) => {
     const [showDetails, setShowDetails] = useState(false);

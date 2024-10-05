@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: Andean Instrument Identifier API
+  version: 1.0.0
+  description: API for identifying Andean musical instruments from audio samples
+
+paths:
+  /api/upload:
+    post:
+      summary: Upload an audio file
+      requestBody:
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        "200":
+          description: Successful upload
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+
+  /api/identify/{audio_id}:
+    get:
+      summary: Identify instrument in an uploaded audio file
+      parameters:
+        - in: path
+          name: audio_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful identification
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  instrument:
+                    type: string
+
+  /api/instrument/{instrument_id}:
+    get:
+      summary: Get information about a specific instrument
+      parameters:
+        - in: path
+          name: instrument_id
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Successful retrieval
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  name:
+                    type: string
+                  type:
+                    type: string
+                  description:
+                    type: string
+                  origin:
+                    type: string

@@ -193,3 +193,15 @@
     background-color: rgba(255, 255, 255, 0.1);
     border: 1px solid #FFD700;
 }
+
+.spectrogram-image-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.spectrogram-image {
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
