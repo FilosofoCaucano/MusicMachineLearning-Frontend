@@ -77,3 +77,13 @@
 .search-input {
     box-sizing: border-box;
 }
+
+.expanded-section {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 8px;
+    max-width: 100%; /* Asegura que no se desborde */
+    text-align: center;
+    overflow: hidden; /* Evita que el contenido se salga */
+}

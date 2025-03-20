@@ -205,3 +205,12 @@
     height: auto;
     border: 1px solid #ccc;
 }
+.spectrogram-display {
+    margin-top: 20px;
+}
+
+.spectrogram-image {
+    max-width: 100%;
+    border-radius: 10px;
+    border: 1px solid #FFD700;
+}

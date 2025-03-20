@@ -1,21 +1,25 @@
 // frontend/src/services/api.js
 import axios from 'axios';
-import config from '../Config/Config';
 
-const api = axios.create({
-    baseURL: config.apiUrl,
-});
+const apiBaseUrl = 'http://127.0.0.1:8000/api';
 
-export const uploadAudio = (file) => {
-    const formData = new FormData();
-    formData.append('audio', file);
-    return api.post('/upload/', formData);
+export const identifyInstrument = async (formData) => {
+    try {
+        const response = await axios.post(`${apiBaseUrl}/upload/`, formData, {
+            headers: {
+                'Content-Type': 'multipart/form-data',
+            },
+        });
+        return response.data;
+    } catch (error) {
+        console.error('Error en la solicitud:', error.response || error.message);
+        throw error;
+    }
 };
 
-export const identifyInstrument = (audioId) => {
-    return api.get(`/identify/${audioId}/`);
-};
 
-export const getInstrumentInfo = (instrumentId) => {
-    return api.get(`/instrument/${instrumentId}/`);
-};
+
+
+
+
+

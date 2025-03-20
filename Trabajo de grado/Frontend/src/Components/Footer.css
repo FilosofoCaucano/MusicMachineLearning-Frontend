@@ -1,26 +1,67 @@
 .footer {
-    background-color: #8B4513;
+    background: rgba(139, 69, 19, 0.85); /* Café translúcido */
     color: #FFD700;
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     font-family: 'IM Fell DW Pica', serif;
-    position: relative;
-    margin: 20px;
-    border: 10px solid transparent;
-    border-image-source: linear-gradient(to right, #8B4513, #FFD700, #8B4513);
-    border-image-slice: 1;
-    border-radius: 25px; /* Increase the value to make the borders more round */
+    border-top: 3px solid #FFD700;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(5px); /* Efecto de transparencia */
 }
 
+/* Logo dentro del footer */
+.footer-logo {
+    width: 60px;
+    border-radius: 50%;
+    border: 2px solid #FFD700;
+    margin-bottom: 10px;
+}
+
+/* Título con tipografía más llamativa */
+.footer-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFD700;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+
+/* Separador decorativo tipo textil andino */
+.footer-divider {
+    width: 50%;
+    height: 3px;
+    background: repeating-linear-gradient(
+        45deg,
+        #FFD700,
+        #FFD700 10px,
+        transparent 10px,
+        transparent 20px
+    );
+    margin: 10px auto;
+}
+
+/* Texto del footer */
 .footer p {
-    margin: 10px 0;
+    font-size: 1rem;
+    color: #FFD700;
+    margin: 5px 0;
 }
 
+/* Enlaces dentro del footer */
 .footer a {
     color: #FFD700;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 .footer a:hover {
+    color: #FFA500;
     text-decoration: underline;
+}
+
+/* Tu nombre en cursiva y sin brillo */
+.footer p strong {
+    font-style: italic;
+    color: #FFD700; /* Mantiene el color dorado, pero sin efectos molestos */
 }
