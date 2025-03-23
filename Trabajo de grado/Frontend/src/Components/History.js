@@ -3,14 +3,24 @@ import React from 'react';
 import './History.css';
 
 const History = ({ instrument = {} }) => {
-    const { name = 'Instrumento desconocido', history = 'No hay información disponible.', imageUrl = '' } = instrument;
+    const {
+        name = 'Instrumento desconocido',
+        history = 'No hay información disponible.',
+        imageUrl = ''
+    } = instrument;
 
     return (
-        <div className="history">
-            <h3>Historia de {name}</h3>
-            {imageUrl && <img src={imageUrl} alt={name} className="instrument-image" />}
-            <p>{history}</p>
-        </div>
+        <article className="history" role="region" aria-label={`Historia del instrumento ${name}`}>
+            <h3 className="history-title">Historia de {name}</h3>
+            {imageUrl && (
+                <img
+                    src={imageUrl}
+                    alt={`Imagen del instrumento andino: ${name}`}
+                    className="instrument-image"
+                />
+            )}
+            <p className="history-description">{history}</p>
+        </article>
     );
 };
 

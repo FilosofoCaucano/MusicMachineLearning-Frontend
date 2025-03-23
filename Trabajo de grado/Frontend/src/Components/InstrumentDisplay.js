@@ -5,18 +5,27 @@ import './InstrumentDisplay.css';
 
 const InstrumentDisplay = ({ instrumentData }) => {
     const chartRef = useRef(null);
+    const chartInstanceRef = useRef(null);
 
     useEffect(() => {
-        if (instrumentData && chartRef.current) {
+        if (instrumentData?.length && chartRef.current) {
             const ctx = chartRef.current.getContext('2d');
-            new Chart(ctx, {
+
+            // 🔄 Destruir gráfico anterior si existe
+            if (chartInstanceRef.current) {
+                chartInstanceRef.current.destroy();
+            }
+
+            // 🎯 Crear nuevo gráfico
+            chartInstanceRef.current = new Chart(ctx, {
                 type: 'doughnut',
                 data: {
                     labels: instrumentData.map(item => item.name),
                     datasets: [{
                         data: instrumentData.map(item => item.percentage),
                         backgroundColor: instrumentData.map(item => item.color),
-                    }]
+                        borderWidth: 1,
+                    }],
                 },
                 options: {
                     responsive: true,
@@ -24,13 +33,18 @@ const InstrumentDisplay = ({ instrumentData }) => {
                         legend: {
                             position: 'top',
                             labels: {
-                                color: '#FFD700'
+                                color: '#FFD700',
+                                font: {
+                                    size: 14
+                                }
                             }
                         },
                         tooltip: {
                             callbacks: {
                                 label: function (tooltipItem) {
-                                    return `${tooltipItem.label}: ${tooltipItem.raw}%`;
+                                    const label = tooltipItem.label || '';
+                                    const value = tooltipItem.raw || 0;
+                                    return `${label}: ${value.toFixed(2)}%`;
                                 }
                             }
                         }
@@ -42,13 +56,19 @@ const InstrumentDisplay = ({ instrumentData }) => {
 
     return (
         <div className="instrument-display">
-            <h2>Instrumentos Identificados</h2>
-            {instrumentData.length ? (
-                <canvas ref={chartRef}></canvas>
+            <h2 className="instrument-title">🎶 Instrumentos Identificados</h2>
+            {instrumentData?.length ? (
+                <canvas
+                    ref={chartRef}
+                    aria-label="Gráfico de instrumentos identificados"
+                    role="img"
+                ></canvas>
             ) : (
                 <div className="no-instruments">
                     <p>No hay instrumentos identificados hasta ahora.</p>
-                    <button className="andean-button">Actualizar</button>
+                    <button className="andean-button" onClick={() => window.location.reload()}>
+                        🔄 Volver a intentar
+                    </button>
                 </div>
             )}
         </div>
@@ -56,6 +76,3 @@ const InstrumentDisplay = ({ instrumentData }) => {
 };
 
 export default InstrumentDisplay;
-
-
-
