@@ -44,7 +44,7 @@ const Footer = () => {
                     </a>
                 </nav>
 
-                <p>© 2024 Todos los derechos reservados.</p>
+                <p>© 2025 Todos los derechos reservados.</p>
                 <address>
                     Creado por <strong>Willian David Correa</strong>
                 </address>

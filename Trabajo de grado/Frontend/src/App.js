@@ -254,7 +254,7 @@ const App = () => {
                             <div ref={refs.wankara}>
                                 <History instrument={{
                                     name: 'Wankara',
-                                    history: 'El wankara es un tambor pequeño y portátil, utilizado en ceremonias y rituales tradicionales de los Andes. Está hecho de madera y piel de animal, y su sonido agudo y preciso lo hace ideal para marcar ritmos rápidos. El wankara es comúnmente tocado junto con otros instrumentos de percusión, como el bombo, en festivales y procesiones. Su diseño compacto permite transportarlo fácilmente, lo que lo convierte en un instrumento práctico para eventos al aire libre.',
+                                    history: 'El wankara es un tambor andino de tamaño mediano, utilizado tradicionalmente en ceremonias y rituales de los pueblos altiplánicos. Fabricado con madera y cuero animal, emite un sonido profundo y resonante que marca el ritmo en danzas y procesiones. Suele tocarse junto con otros instrumentos como el bombo o la zampoña, y su diseño portátil permite transportarlo con facilidad, lo que lo convierte en una pieza fundamental para eventos al aire libre y festivales comunitarios.',
                                     imageUrl: 'Wankara01.jpg'
                                 }} />
                             </div>
@@ -265,6 +265,14 @@ const App = () => {
                                     imageUrl: 'Guacharaca01.jpg'
                                 }} />
                             </div>
+                            <div ref={refs.chajchas}>
+                                <History instrument={{
+                                    name: 'Chajchas',
+                                    history: 'Las chajchas son un instrumento de percusión tradicional de los Andes, elaborado con pezuñas secas de cabra, oveja o llama, atadas a una pulsera de tela o cuero. Se llevan en las muñecas o tobillos, y su característico sonido de cascabeleo acompaña danzas ceremoniales y celebraciones comunitarias. Además de su función musical, las chajchas tienen un valor simbólico, evocando la conexión entre el ser humano, los animales y la naturaleza en la cosmovisión andina.',
+                                    imageUrl: 'Chajchas1.jpg'
+                                }} />
+                            </div>
+
                         </div>
                     </div>
 

@@ -1,6 +1,5 @@
 // frontend/src/components/AudioUploader.js
 import React, { useState } from 'react';
-import { identifyInstrument } from '../Services/Api';
 import { Bar } from 'react-chartjs-2';
 import './AudioUploader.css';
 
@@ -31,6 +30,8 @@ const AudioUploader = () => {
         setAudioFile(file);
     };
 
+    const BACKEND_URL = 'http://127.0.0.1:8000'; // URL del backend
+
     const handleUpload = async () => {
         if (!audioFile) {
             setErrorMessage('Por favor selecciona un archivo antes de subir.');
@@ -41,11 +42,24 @@ const AudioUploader = () => {
         setErrorMessage('');
 
         try {
+            // Paso 1: Subir el archivo al backend para guardar y obtener audio_id
             const formData = new FormData();
             formData.append('file', audioFile);
-            formData.append('model', selectedModel);
 
-            const response = await identifyInstrument(formData);
+            const uploadRes = await fetch(`${BACKEND_URL}/api/upload/`, {
+                method: 'POST',
+                body: formData,
+            });
+
+            if (!uploadRes.ok) {
+                throw new Error('Error en la subida del archivo.');
+            }
+
+            const { audio_id } = await uploadRes.json();
+
+            // Paso 2: Hacer identificación con el audio_id
+            const identifyRes = await fetch(`${BACKEND_URL}/api/identify/${audio_id}/?model=${selectedModel}`);
+            const response = await identifyRes.json();
 
             if (response.instrument && response.probabilities) {
                 setPredictedInstrument(response.instrument);
